@@ -1,19 +1,35 @@
 {
   "name": "DahliaCerdik",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "gradle-clean-dev": "cd android ./gradlew clean",
+    "gradle-clean-cache": "cd android ./gradlew cleanBuildCache",
+    "apk": "cd android && ./gradlew assembleRelease",
+    "aab": "cd android && ./gradlew bundleRelease"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^3.1.1",
+    "@react-native/new-app-screen": "0.87.1",
+    "@react-navigation/drawer": "^7.14.3",
+    "@react-navigation/material-top-tabs": "^7.8.0",
+    "@react-navigation/native": "^7.5.0",
+    "@react-navigation/stack": "^7.12.0",
+    "@reduxjs/toolkit": "^2.13.0",
     "react": "19.2.3",
     "react-native": "0.87.1",
-    "@react-native/new-app-screen": "0.87.1",
-    "react-native-safe-area-context": "^5.5.2"
+    "react-native-gesture-handler": "^3.3.0",
+    "react-native-pager-view": "^9.0.7",
+    "react-native-reanimated": "^4.7.1",
+    "react-native-safe-area-context": "^5.5.2",
+    "react-native-screens": "^4.29.0",
+    "react-native-worklets": "^0.13.0",
+    "react-redux": "^9.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -37,6 +53,7 @@
     "typescript": "^6.0.3"
   },
   "engines": {
-    "node": ">= 22.11.0"
-  }
+    "node": "^22.13.0 || ^24.3.0 || >= 26.0.0"
+  },
+  "packageManager": "yarn@3.6.4+sha512.e70835d4d6d62c07be76b3c1529cb640c7443f0fe434ef4b6478a5a399218cbaf1511b396b3c56eb03bc86424cff2320f6167ad2fde273aa0df6e60b7754029f"
 }
